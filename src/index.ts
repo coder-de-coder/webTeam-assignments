@@ -5,6 +5,12 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/health', (req, res) => {
+    res.json({
+        message : " Perfect health" 
+    })
+})
+
 app.get('/events', (req, res) => {
     res.json(events)
 })
