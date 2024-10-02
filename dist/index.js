@@ -8,6 +8,11 @@ const iiitkota_events_1 = require("./utils/iiitkota.events");
 const iiitkota_announcements_1 = require("./utils/iiitkota.announcements");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.get('/health', (req, res) => {
+    res.json({
+        message: " Perfect health"
+    });
+});
 app.get('/events', (req, res) => {
     res.json(iiitkota_events_1.events);
 });
